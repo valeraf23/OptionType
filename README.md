@@ -6,7 +6,7 @@
 
 #### Install with NuGet Package Manager Console
 ```
-Install-Package ObjectComparator
+Install-Package VF.OptionType
 ```
 
 ## Example:

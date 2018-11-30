@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
     <Compile Include="Implementation\ActionOnNoneNotResolved.cs" />
     <Compile Include="Implementation\ActionOnValueNotResolved.cs" />
     <Compile Include="Implementation\ActionResolved.cs" />

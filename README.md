@@ -26,4 +26,4 @@ var result = Option<int>.For(5).When(x => x > 3).MapTo(x => $"{x} > 3").When(x =
   	    
 ```
 
-##For more example, look tests##
+## For more example, look tests ##

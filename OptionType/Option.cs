@@ -68,8 +68,8 @@ namespace OptionType
         public override int GetHashCode() => EqualityComparer<T>.Default.GetHashCode(Content.Single());
 
         public static bool operator ==(Option<T> a, Option<T> b) =>
-            (a is null && b is null) ||
-            (!(a is null) && a.Equals(b));
+            a is null && b is null ||
+            !(a is null) && a.Equals(b);
 
         public static bool operator !=(Option<T> a, Option<T> b) => !(a == b);
     }

@@ -1,7 +1,8 @@
 ﻿using System;
 using NUnit.Framework;
+using OptionType;
 
-namespace OptionType.Tests
+namespace Tests
 {
     [TestFixture]
     internal class OptionUnitTests

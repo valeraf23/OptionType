@@ -14,15 +14,32 @@ Install-Package VF.OptionType
 ```csharp
 
 var touched = false;
-Option<int>.For(5).When(x => x > 3).Do(x => touched = true).Execute();
+Option<int>.For(5)
+.When(x => x > 3)
+.Do(x => touched = true)
+.Execute();
     
 var value = 0;
-Option<int>.For(5).When(x => x > 6).Do(x => Assert.Fail()).WhenValue().Do(x => value = x).Execute();
+Option<int>.For(5)
+.When(x => x > 6)
+.Do(x => Assert.Fail())
+.WhenValue()
+.Do(x => value = x)
+.Execute();
             
 var touched = false;
-Option<int>.None().When(x => true).Do(x => Assert.Fail()).WhenNone().Do(() => touched = true).Execute();
+Option<int>.None()
+.When(x => true)
+.Do(x => Assert.Fail())
+.WhenNone()
+.Do(() => touched = true)
+.Execute();
 
-var result = Option<int>.For(5).When(x => x > 3).MapTo(x => $"{x} > 3").When(x => x > 2).MapTo(x => "error").Map();
+var result = Option<int>.For(5).When(x => x > 3)
+.MapTo(x => $"{x} > 3")
+.When(x => x > 2)
+.MapTo(x => "error")
+.Map();
   	    
 ```
 
